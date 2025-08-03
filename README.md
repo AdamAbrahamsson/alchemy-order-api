@@ -48,7 +48,9 @@ python3 main.py
 ### 🐳 Docker Setup
 - **Build the image**
 
+    ```bash
     docker build -t alchemy-order-api .
+    ```
 
 
 - **You have the option to pull the image**
@@ -58,6 +60,7 @@ python3 main.py
 - **Run the container (port 5001 used inside Dockerfile)**
     
     docker run -p 5001:5000 alchemy-order-api
+
 
 
 
