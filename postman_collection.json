@@ -26,7 +26,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:{{port}}/products/",
+					"raw": "http://127.0.0.1:5001/products",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -34,10 +34,9 @@
 						"0",
 						"1"
 					],
-					"port": "{{port}}",
+					"port": "5001",
 					"path": [
-						"products",
-						""
+						"products"
 					]
 				}
 			},
@@ -49,7 +48,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:5001/products/6",
+					"raw": "http://127.0.0.1:5001/products/4",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -60,7 +59,7 @@
 					"port": "5001",
 					"path": [
 						"products",
-						"6"
+						"4"
 					]
 				}
 			},
