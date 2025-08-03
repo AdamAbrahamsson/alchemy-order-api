@@ -55,11 +55,16 @@ python3 main.py
 
 - **You have the option to pull the image**
 
+    ```bash
     docker pull adamabrahamsson/alchemy-order-api:latest
+    ```
 
 - **Run the container (port 5001 used inside Dockerfile)**
-    
+
+    ```bash
     docker run -p 5001:5000 alchemy-order-api
+    ```
+
 
 
 
