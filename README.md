@@ -50,10 +50,11 @@ python3 main.py
  &emsp;&emsp;docker build -t alchemy-order-api .
 
 #### You have the option to pull the image
-  docker pull adamabrahamsson/alchemy-order-api:latest
+   &emsp;&emsp;docker pull adamabrahamsson/alchemy-order-api:latest
 
 #### Run the container (port 5001 used inside Dockerfile)
-  docker run -p 5001:5000 alchemy-order-api
+   &emsp;&emsp;docker run -p 5001:5000 alchemy-order-api
+
 
 
 
