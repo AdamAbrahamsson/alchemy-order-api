@@ -83,3 +83,17 @@ def add_product():
     db.session.add(new_product)
     db.session.commit()
     return jsonify({"message": "Product added successfully."}), 201
+
+@bp.route('/products/<int:product_id>', methods=['DELETE'])
+def delete_product(product_id):
+    product = Product.query.get(product_id)
+    if not product:
+        return jsonify({"error": "Product not found"}), 404
+    
+    deleted_name = product.name
+    db.session.delete(product)
+    db.session.commit()
+    
+    return jsonify({
+        "message": f"Product '{deleted_name}' (ID {product_id}) has been deleted."
+    }), 200
