@@ -74,6 +74,10 @@ python3 main.py
     ```bash
     docker run --rm alchemy-order-api pytest
     ```
+ ### 📬 Postman Testing
+    This project was developed and tested using Postman.
+    All REST endpoints were verified with Postman.   
+
 
 
 
