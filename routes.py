@@ -18,6 +18,20 @@ def get_products():
     ]
     return jsonify(result)
 
+@bp.route("/products/<int:product_id>", methods=["GET"])
+def get_product(product_id):
+    product = Product.query.get(product_id)
+    if not product:
+        return jsonify({"error": f"Product with ID {product_id} not found."}), 404
+    
+    return jsonify({
+        "id": product.id,
+        "name": product.name,
+        "category": product.category,
+        "stock": product.stock,
+        "price": product.price
+    }), 200
+
 @bp.route('/products/<int:id>', methods=['Patch'])
 def patch_product(id):
     product = Product.query.get(id)
