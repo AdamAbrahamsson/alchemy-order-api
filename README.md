@@ -44,8 +44,10 @@ python3 seed.py
 
 # Run the application
 python3 main.py
+```
 
-### 🐳  Docker Setup
+
+
 
 
 
