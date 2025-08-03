@@ -12,18 +12,18 @@ A RESTful API for managing products and orders, built with Flask and SQLAlchemy.
 
 ## 📂 Project Structure
 
-alchemy-order-api/
-  - app.py # App factory entry point
-  - main.py # Application runner
-  - models.py # SQLAlchemy model
-  ─ routes.py # API routes and business logic
-  ─ seed.py # DB seeder script to populate the database
-  ─ test_app.py # Pytest test suite for the CI/CD
-  ─ requirements.txt # Dependencies
-  ─ Dockerfile # Docker image setup
-  ─ .github/workflows/ # CI/CD pipeline config
-    ─ ci.yml
-  - README.md # This file
+- `app.py` – App factory entry point  
+- `main.py` – Application runner  
+- `models.py` – SQLAlchemy models  
+- `routes.py` – API routes and business logic  
+- `seed.py` – DB seeder script to populate the database  
+- `test_app.py` – Pytest test suite for CI/CD  
+- `requirements.txt` – Python dependencies  
+- `Dockerfile` – Docker image setup  
+- `.github/workflows/ci.yml` – GitHub Actions CI/CD pipeline  
+- `README.md` – Project documentation  
+
+
 
 
 
