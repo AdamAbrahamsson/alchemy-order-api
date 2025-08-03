@@ -65,7 +65,7 @@ python3 main.py
     docker run -p 5001:5000 alchemy-order-api
     ```
 
-###🔬 Running Tests
+### 🔬 Running Tests
 - **Running the test in the IDE**
     ```bash
     pytest
@@ -74,6 +74,7 @@ python3 main.py
     ```bash
     docker run --rm alchemy-order-api pytest
     ```
+
 
 
 
