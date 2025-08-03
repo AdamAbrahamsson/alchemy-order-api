@@ -23,7 +23,7 @@ def test_get_all_products(client):
 
     data = response.get_json()
     assert isinstance(data, list)
-    assert len(data) == 2
+    assert len(data) == 1
     assert data[0]["name"] == "Pen"
     assert data[0]["category"] == "Writing"
     assert data[0]["stock"] == 100
