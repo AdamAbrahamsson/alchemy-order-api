@@ -21,7 +21,30 @@ A RESTful API for managing products and orders, built with Flask and SQLAlchemy.
 - `requirements.txt` – Python dependencies  
 - `Dockerfile` – Docker image setup  
 - `.github/workflows/ci.yml` – GitHub Actions CI/CD pipeline  
-- `README.md` – Project documentation  
+- `README.md` – Project documentation
+
+## 🛠️ Setup & Installation
+
+### 📦 Local Setup (Python)
+
+```bash
+# Clone the repository
+git clone https://github.com/AdamAbrahamsson/alchemy-order-api.git
+cd alchemy-order-api
+
+# Create a virtual environment (optional but recommended)
+python3 -m venv venv
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Seed the database
+python3 seed.py
+
+# Run the application
+python3 main.py
+
 
 
 
