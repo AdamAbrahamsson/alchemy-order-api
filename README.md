@@ -14,7 +14,7 @@ A RESTful API for managing products and orders, built with Flask and SQLAlchemy.
 
 alchemy-order-api/
   - app.py # App factory entry point
-    - main.py # Application runner
+  - main.py # Application runner
 ├── models.py # SQLAlchemy model
 ├── routes.py # API routes and business logic
 ├── seed.py # DB seeder script to populate the database
