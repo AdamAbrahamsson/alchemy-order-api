@@ -40,3 +40,46 @@ def patch_product(id):
         "stock": product.stock,
         "price": product.price
     }), 200
+
+@bp.route("/products", methods=["POST"])
+def add_product():
+    data = request.get_json()
+    required_fields = {
+        "name": str,
+        "category": str,
+        "stock": int,
+        "price": (int, float)
+    }
+    errors = {}
+
+    # Unexpected fields
+    for key in data.keys():
+        if key not in required_fields:
+            errors[key] = "Unexpected field."
+
+    # Validate required fields and types
+    for field, field_type in required_fields.items():
+        if field not in data:
+            errors[field] = "Missing required field."
+        else:
+            if not isinstance(data[field], field_type):
+                errors[field] = f"Invalid type. Expected {field_type}."
+
+    # Check for duplicate product name
+    existing = Product.query.filter_by(name=data.get("name")).first()
+    if existing:
+        errors["name"] = "Product with this name already exists."
+
+    if errors:
+        return jsonify({"errors": errors}), 400
+
+    # Create and add new product
+    new_product = Product(
+        name=data["name"],
+        category=data["category"],
+        stock=data["stock"],
+        price=data["price"]
+    )
+    db.session.add(new_product)
+    db.session.commit()
+    return jsonify({"message": "Product added successfully."}), 201
