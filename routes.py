@@ -108,6 +108,4 @@ def delete_product(product_id):
     db.session.delete(product)
     db.session.commit()
     
-    return jsonify({
-        "message": f"Product '{deleted_name}' (ID {product_id}) has been deleted."
-    }), 200
+    return jsonify({"message": "Product deleted successfully."}), 200
