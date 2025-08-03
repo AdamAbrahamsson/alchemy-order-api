@@ -76,7 +76,9 @@ python3 main.py
     ```
  ### 📬 Postman Testing
     This project was developed and tested using Postman.
-    All REST endpoints were verified with Postman.   
+    All REST endpoints were verified with Postman.
+    You can download it from here: https://github.com/AdamAbrahamsson/alchemy-order-api/blob/main/postman_collection.json
+
 
 
 
